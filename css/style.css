@@ -1,0 +1,26 @@
+* {
+	padding:0;
+margin:0;
+box-sizing:border-box;
+}
+.container {
+background: radial-gradient(circle farthest-corner at center center, #B8E1FC 0%, #231421 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.time {
+	display: flex;
+    justify-content: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: rebeccapurple;
+    font-family: sans-serif
+}
+button {
+	    font-size: 20px;
+    color: #952da7;
+    background-color: #50ffff;
+	border-radius:20px;
+}

@@ -19,33 +19,43 @@ function clock(){
 	document.querySelector(".time").innerHTML=date.toLocaleTimeString();
 	
 }
-
+let psbtn=document.querySelector(".Pause");
+psbtn.disabled=true;
 let srtbtn=document.querySelector(".Start");
 srtbtn.addEventListener("click",start);
 var timeDelay;
 function start() {
 	timeDelay=setInterval(clock,1000);
+	srtbtn.disabled=true;
+	psbtn.disabled=false;
 }
 
+let rsbtn=document.querySelector(".Resume");
+rsbtn.disabled=true;
 
-let psbtn=document.querySelector(".Pause");
+
 psbtn.addEventListener("click",pause);
 var pasued;
 function pause() {
 	paused=clearInterval(timeDelay);
+	rsbtn.disabled=false;
 }
 
-let rsbtn=document.querySelector(".Resume");
+
+
 rsbtn.addEventListener("click",resume);
 
 function resume() {
 	start();
+	
 }
 
 let stpbtn=document.querySelector(".Stop");
 stpbtn.addEventListener("click",stoper);
 var stopped;
 function stoper() {
+	
 	stopped=clearInterval(timeDelay);
 	document.querySelector(".time").innerHTML="00:00:00";
+	srtbtn.disabled=false;
 }

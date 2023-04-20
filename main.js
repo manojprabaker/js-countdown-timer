@@ -1,4 +1,3 @@
-
 let cnt=document.querySelector(".col");
 let arr=["Start","Pause","Resume","Stop"];
 arr.forEach(function(e,i){
